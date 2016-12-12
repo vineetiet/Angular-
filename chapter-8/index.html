@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+<head>
+	<meta charset="utf-8">
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+	<style>body { font-size: 1.2em;} </style>
+	<title>Custom Filters</title>
+</head>
+<body>
+<h1>Custom Filters</h1>
+<div ng-controller='MsgController'>
+    Original: {{sayMessage()}} <br>
+    Loves: {{sayLovesMessage()}} <br>
+    Truth: {{sayLovesMessage() | truth: 'healthy' : 'cookie'}}<br> <!-- healthy will be replaced by cookie -->
+    BIG Truth: {{sayLovesMessage() | truth: 'healthy' : 'cookie' | uppercase}} <!-- chaining our filter, called uppercase filter right after the custom filter -->
+	<div>
+		<button ng-click="feedVineet()">Feed Vineet</button>
+		<br>
+		<img ng-src="images/vineet_{{stateOfBeing}}.jpg">
+	</div>
+</div>
+</body>
+</html>
