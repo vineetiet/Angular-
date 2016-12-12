@@ -1,0 +1,19 @@
+set up :
+
+install git.
+install browser sync:
+  - download node.js
+  - node --version
+  - npm --version
+  run : npm install -g browser-sync
+
+Browser Sync - browser-sync start --server --directory --files "**/*"
+
+git status
+git add .
+git commit -m "First web file"
+git config --global user.name "vineetiet"
+git config --global user.email "vineetiet.gupta@gmail.com"
+git push
+git config --global push.default simple
+git pull origin master - to pull the created folder to your local
