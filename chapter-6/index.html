@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+<head>
+	<meta charset="utf-8">
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+	<style> body {font-size: 1.2em;}</style>
+	<title>Filters</title>
+</head>
+<body>
+	<h1>Filters</h1>
+
+	<div ng-controller='MsgController'>
+		{{name}} has a message for you: <br>
+		{{sayMessage()}}
+
+		<div>
+			<button ng-click="feedVineet()">Feed Vineet</button>
+				cost: {{cookieCost | currency : "#blah" :4}}
+			<br>
+			<img ng-src="images/vineet_{{stateOfBeing}}.jpg">
+		</div>
+		
+	</div>
+		
+
+</body>
+</html>
