@@ -132,7 +132,7 @@ function WeightLossFilterService($q, $timeout) {
         deferred.resolve(result)
       }
       else {
-        result.message = "Stay away from cookies, Yaakov!";
+        result.message = "Stay away from cookies, Vineet!";
         deferred.reject(result);
       }
     }, 3000);
@@ -153,7 +153,7 @@ function WeightLossFilterService($q, $timeout) {
         deferred.resolve(result);
       }
       else {
-        result.message = "That's too much, Yaakov!";
+        result.message = "That's too much, Vineet!";
         deferred.reject(result);
       }
     }, 1000);
