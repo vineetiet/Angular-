@@ -1,0 +1,9 @@
+  <h3>{{list.title}}</h3> 
+<ol>
+			<li ng-repeat="item in list.items">
+				{{item.quantity}} of {{item.name}}
+
+			</li>
+</ol>
+
+  <div class="error" ng-if="list.cookiesInList();">WARNING!! Cookies found</div>   
