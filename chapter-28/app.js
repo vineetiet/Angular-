@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module('ShoppingListApp',[])
 	.controller('ShoppingListController', ShoppingListController)
-	.controller('ShoppingListController1', ShoppingListController1)
+	//.controller('ShoppingListController1', ShoppingListController1)
 	.factory('ShoppingListFactory',ShoppingListFactory)
 	.controller('ShoppingListDirectiveController',ShoppingListDirectiveController)
 	.directive('shoppingList', ShoppingListDirective)
@@ -39,33 +39,35 @@
 		}
 		return false;
 	};
+
+
 		
 	}
 
-	ShoppingListController1.$inject = ['ShoppingListFactory'];
-	function ShoppingListController1(ShoppingListFactory){
-			var list1 = this;
-			list1.itemName = "";
-			list1.itemQuantity = "";
+	// ShoppingListController1.$inject = ['ShoppingListFactory'];
+	// function ShoppingListController1(ShoppingListFactory){
+	// 		var list1 = this;
+	// 		list1.itemName = "";
+	// 		list1.itemQuantity = "";
 
-			var shoppingListService = ShoppingListFactory();
+	// 		var shoppingListService = ShoppingListFactory();
 
-			//list.items = "0";
-			list1.items = shoppingListService.getItems();
+	// 		//list.items = "0";
+	// 		list1.items = shoppingListService.getItems();
 
-			var orginalTitle = "Shopping List #";
-			list1.title = orginalTitle + " " + list1.items.length;
+	// 		var orginalTitle = "Shopping List #";
+	// 		list1.title = orginalTitle + " " + list1.items.length;
 
-			list1.addItem = function(){
+	// 		list1.addItem = function(){
 
-				try{
-					shoppingListService.addItem(list1.itemName, list1.itemQuantity);
-				}catch(error){
-					list1.errorMessage = error.message
-				}
+	// 			try{
+	// 				shoppingListService.addItem(list1.itemName, list1.itemQuantity);
+	// 			}catch(error){
+	// 				list1.errorMessage = error.message
+	// 			}
 				
-			};
-	}
+	// 		};
+	// }
 
 	ShoppingListController.$inject = ['ShoppingListFactory'];
 	function ShoppingListController(ShoppingListFactory){
@@ -80,12 +82,15 @@
 			list.items = shoppingListService.getItems();
 
 			var orginalTitle = "Shopping List #";
-			list.title = orginalTitle + " " + list.items.length;
+			list.title = orginalTitle + " " +  list.items.length;
 
 			list.addItem = function(){
 
 				try{
+					
+
 					shoppingListService.addItem(list.itemName, list.itemQuantity);
+					list.title = orginalTitle + " " +  list.items.length;
 				}catch(error){
 					list.errorMessage = error.message
 				}
@@ -107,6 +112,7 @@
 		var items = [];
 
 		service.getItems = function(){
+
 			return items;
 		}
 
