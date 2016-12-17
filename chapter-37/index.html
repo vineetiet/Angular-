@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="RoutingApp">
+<head>
+	<meta charset="utf-8">
+
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Intro to ui-router</title>
+</head>
+<body>
+	<h1>Intro to ui-router</h1>
+	<div class="tabs">
+		
+	<a ui-sref="tab1" ui-sref-active="activeTab">Tab 1</a>
+	<a ui-sref="tab2" ui-sref-active="activeTab">Tab 2</a>
+	<!-- <button ui-sref="tab2">Tab 2</button> -->
+	</div>
+	
+	<!-- view will be inserted here -->
+	<ui-view></ui-view>
+
+	<!-- libaries -->
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-ui-router.js"></script>
+
+	<!-- Modules -->
+	<script src="src/app.js"></script>
+
+	
+    
+</body>
+</html>
