@@ -1,0 +1,40 @@
+<!-- 
+When we click the link from the home page, it switches to main-list, means we are switching the view first and and then going to get the data. it's strange we switch to a view before we know whether there is data or not to begin with.
+
+Resolve property can be used to inject values directly into the controller responsible for the state.
+
+If resolve property is a promise:
+	- Router will wait for it to resolve before transitioning to the new sate 
+	- If rejected, router will not transition to the new state at all.
+
+The name of the key in the resolver's property object is what is to be injected into the corresponding controller function
+Resolve can have properties that contain anything: objects, string etc
+-->
+<!DOCTYPE html>
+<html ng-app="ShoppingList">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>No cookie Shopping list</title>
+</head>
+<body>
+	<h1>Welcome to premade No cookie shopping list</h1>
+	<ui-view></ui-view>
+
+	<!-- Libaries-->
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-ui-router.js"></script>
+
+	<!-- Modules -->
+	<script src="src/shoppinglist/shoppinglist.module.js"></script>
+
+	<!-- Router-->
+	<script src="src/routers.js"></script>
+
+	<!-- 'ShoppingList module artifacts-->
+	<script src="src/shoppinglist/shoppinglist.component.js"></script>
+	<script src="src/shoppinglist/main-shoppinglist.controller.js"></script>
+	<script src="src/shoppinglist/shoppinglist.service.js"></script>
+
+</body>
+</html>
