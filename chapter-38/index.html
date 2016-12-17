@@ -1,0 +1,36 @@
+<!-- 
+We can declare a controller that is responsible for the sate's template right in the sate's declaration
+Use:
+	- controller: 'CtrlName as label' 
+	- controller: CtrlName
+	  controllerAs: 'label'
+In the template, use label.data as usual with controllerAs syantax
+-->
+<!DOCTYPE html>
+<html ng-app="ShoppingList">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>No cookie Shopping list</title>
+</head>
+<body>
+	<h1>Welcome to premade No cookie shopping list</h1>
+	<ui-view></ui-view>
+
+	<!-- Libaries-->
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-ui-router.js"></script>
+
+	<!-- Modules -->
+	<script src="src/shoppinglist/shoppinglist.module.js"></script>
+
+	<!-- Router-->
+	<script src="src/routers.js"></script>
+
+	<!-- 'ShoppingList module artifacts-->
+	<script src="src/shoppinglist/shoppinglist.component.js"></script>
+	<script src="src/shoppinglist/main-shoppinglist.controller.js"></script>
+	<script src="src/shoppinglist/shoppinglist.service.js"></script>
+
+</body>
+</html>
