@@ -17,3 +17,10 @@ git config --global user.email "vineetiet.gupta@gmail.com"
 git push
 git config --global push.default simple
 git pull origin master - to pull the created folder to your local
+
+
+------------------------------
+
+Heroku server setup:
+
+https://github.com/jhu-ep-coursera/restaurant-server
