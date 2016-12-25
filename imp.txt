@@ -24,3 +24,5 @@ git pull origin master - to pull the created folder to your local
 Heroku server setup:
 
 https://github.com/jhu-ep-coursera/restaurant-server
+
+https://vineetiet-restaurant.herokuapp.com/menu_items.json
