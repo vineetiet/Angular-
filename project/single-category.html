@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>David Chu's China Bistro</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header>
+	<nav id="header-nav" class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header"> <!-- here nav bar header provided by bootstrap is a floating property -->
+
+				<a href="index.html" class="pull-left visible-md visible-lg"> <!-- navbar-brand is float so if we apply our logo float left we will able to make the navbar-brand right to the logo, as of now navbar-brand is stacking to the logo. pull-left is bootstrap provided class which work same as float left-->
+				<!-- If the screen size is medium, this a href element is be visible but anything other than this point we don't want this element to be dispaly. We can control this by using visible-md property. This element will be visible when the screen size is large or medium size-->
+					
+					<div id="logo-image" alt="Logo image"></div> <!-- insert logo as a background image in this div -->
+				</a>
+
+				<div class="navbar-brand">
+
+					<a href="index.html"><h1>David Chu's China 	Bistro</h1></a>
+					<p>
+						<img src="images/star-k-logo.png" alt="kosher certification">
+						<span>Kosher Certified</span>
+					</p>
+
+				</div> <!-- navbar-brand -->
+
+					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+							data-target="#collapsable-nav" aria-expanded="false">
+						
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+
+					</button>
+				
+			</div><!-- navbar-header -->
+
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+
+					<ul id="nav-list" class="nav navbar-nav navbar-right"> <!-- nabbar-right will float to right -->
+						
+						<li class="visible-xs">
+							<a href="index.html">
+								<span class="glyphicon glyphicon-cutlery"></span><br
+								 class="hidden-xs">Home</a>
+						</li>
+
+						<li class="active">
+							<a href="menu-categories.html">
+								<span class="glyphicon glyphicon-cutlery"></span><br
+								 class="hidden-xs">Menu</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-info-sign"></span><br
+								 class="hidden-xs">About</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-certificate"></span><br
+								 class="hidden-xs">Awards</a>
+						</li>
+						<li id="phone" class="hidden-xs"> <!-- when the screen will be super small we want this ph number hidden -->
+							<a href="tel:815-593-3049">
+								<span>815-593-3049</span></a><div>* We Deliver</div>
+						</li>
+					</ul> <!-- nav-list -->
+					
+				</div> <!-- collapsable-nav -->
+
+		</div> <!-- container -->
+	</nav> <!-- nav -->
+</header>
+
+<div id="main-content" class="container">
+	
+			
+		</div>
+		<div class="text-center">&copy; Copyright David Chu's China Bistro 2016
+			
+		</div>
+	</div> <!-- container -->
+</footer><!-- footer -->
+
+<script src="js/ajax-utils.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+
+
+<div class="menu-item-tile col-md-6">
+
+			<div class="row">
+
+				<div class="col-sm-5">
+
+					<div class="menu-item-photo">
+						<div>{{$ctrl.menuItems.short_name}}</div>
+						<img class="img-responsive" width="250" height="150"
+							ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItems.short_name}}.jpg" alt="{{$ctrl.menuItems.name}}"> <!-- now we want to pull the image from server so we need component's 
+							controller to inject ApiPath -->
+					</div>
+					<div class="menu-item-price">{{$ctrl.menuItems.price_small | currency}}<span> {{$ctrl.menuItems.small_portion_name}} </span> <!-- apply currency filter -->
+					{{$ctrl.menuItems.price_large | currency}} <span>{{$ctrl.menuItems.large_portion_name}}</span></div>
+					
+				</div>
+
+				<div class="menu-item-description col-sm-7">
+					<h3 class="menu-item-title">{{$ctrl.menuItems.name}}</h3>
+					<p class="menu-item-details">{{$ctrl.menuItems.description}}
+					
+						
+					</p>
+					
+				</div>
+				
+			</div>
+
+			<hr class="visible-xs">
+			
+		</div>

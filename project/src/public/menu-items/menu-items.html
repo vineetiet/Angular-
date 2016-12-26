@@ -1,0 +1,14 @@
+
+
+<div class="container">
+	
+
+<h2 id="menu-categories-title" class="text-center">{{menuItemCtrl.menuItems.category.name}}</h2>
+<div class="text-center">{{menuItemCtrl.menuItems.category.special_instructions}}</div>
+
+<!-- {{menuItemCtrl.menuItems.menu_items}}  -->
+
+<menu-items ng-repeat="cat in menuItemCtrl.menuItems.menu_items" menu-items="cat"></menu-items>
+
+</div>
+
